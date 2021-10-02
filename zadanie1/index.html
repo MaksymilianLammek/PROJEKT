@@ -1,0 +1,45 @@
+<html>
+ <head>
+ <title>przyklad1a</title>
+ <script language="JavaScript">
+ function WinOpen_lammek1() 
+ {
+window.open("przyklad1a.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=280,top=400,left=400");
+ }
+ function WinOpen_lammek2() 
+ {
+window.open("przyklad1b.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=280,top=400,left=400");
+ }
+ function WinOpen_lammek3() 
+ {
+window.open("przyklad1c.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=280,top=400,left=400");
+ }
+ function WinOpen_lammek4() 
+ {
+window.open("przyklad1d.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=280,top=400,left=400");
+ }
+ </script>
+ </head>
+<body>
+ <form>
+ <input type="button" name="przycisk1a" value="lammek - przyklad1a" onclick="WinOpen_lammek1(' ')">
+ <input type="button" name="przycisk1b" value="lammek - przyklad1b" onclick="WinOpen_lammek2(' ')">
+ <input type="button" name="przycisk1c" value="lammek - przyklad1c" onclick="WinOpen_lammek3(' ')">
+ <input type="button" name="przycisk1d" value="lammek - przyklad1d" onclick="WinOpen_lammek4(' ')">
+
+ </form>
+ <h2><p>Rodzaje okienek:</p></h2>
+ <ul>
+    <li>Okienko alert – wyświetlająca okienko dialogowe z informacją i przyciskiem OK</li>
+    <li>Okienko prompt – generująca okno, w którym użytkownik może wpisać wartość, zwracaną następnie do programu</li>
+    <li>Okienko confirm służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm)</li>
+  </ul>  
+ <h2><p>Konwersja liczb:</p></h2>
+ <h4><p>Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków dlatego konieczna jest 
+    konwersji z ciągu znaków na wartości liczbowe aby wykonywac obliczenia.
+    parseFloat(zmienna) - konwersja zmiennej do typu float
+    parseInt(zmienna) - konwersja zmiennej do typu int (liczbowego)
+    toString(zmienna) - konwersja zmiennej do typu łańcuchowego
+    </p></h4>
+</body>
+</html>
