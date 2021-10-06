@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> Zadanie 10 </title>
+<script language="JavaScript">
+    // Javascript program to print a fraction
+    // in Egyptian Form using Greedy
+    // Algorithm
+     
+    function printEgyptian(nr, dr)
+    {
+        // If either numerator or
+        // denominator is 0
+        if (dr == 0 || nr == 0)
+            return;
+ 
+        // If numerator divides denominator,
+        // then simple division  makes
+        // the fraction in 1/n form
+        if (dr % nr == 0)
+        {
+            document.write("1/" + parseInt(dr / nr, 10));
+            return;
+        }
+ 
+        // If denominator divides numerator,
+        // then the given number is not fraction
+        if (nr % dr == 0)
+        {
+            document.write(parseInt(nr / dr, 10));
+            return;
+        }
+ 
+        // If numerator is more than denominator
+        if (nr > dr)
+        {
+            document.write(parseInt(nr / dr, 10) + " + ");
+            printEgyptian(nr % dr, dr);
+            return;
+        }
+ 
+        // We reach here dr > nr and dr%nr
+        // is non-zero. Find ceiling of
+        // dr/nr and print it as first
+        // fraction
+        let n = parseInt(dr / nr, 10) + 1;
+        document.write("1/" + n + " + ");
+ 
+        // Recur for remaining part
+        printEgyptian(nr * n - dr, dr * n);
+    }
+     
+    function main() {
+        var nr = prompt("licznik ułamka to: ","");
+        var m_lam = prompt("mianownik ułamka to: ","");
+
+        document.write( "reprezentacja ułamka egipskiego to: " + nr + "/" + m_lam + " is\n ");
+
+        printEgyptian(nr, m_lam);
+    }
+
+</script>
+</head>
+<body>
+<form>
+<input type="button" name="button" value="OBLICZ" onclick="main()">
+</form>
+<div id="d1" style="font-size: 47;color: green;">
+    <p>Tutaj będzie odpowiedź do zadania w sekundach</p>   
+</div>
+</body>
+</html>
