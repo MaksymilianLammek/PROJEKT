@@ -1,0 +1,91 @@
+<html>
+<head>
+<title> Zadanie 15 </title>
+<script language="JavaScript">
+
+function x1Load()
+{
+    var x1_lam = prompt("Podaj wartość x1 : ");     
+    return x1_lam;
+}
+
+function x2Load()
+{
+    var x2_lam = prompt("Podaj wartość x2 : ");   
+    return x2_lam;
+}
+
+function yCalc()
+{
+    var x1 = x1Load();
+    var y = 0;
+     
+    var potega = 11/13;
+
+    y = 3*Math.pow(x1, potega);
+
+    var str = "wczytana liczba x1 to " + x1;
+    document.getElementById("p1").innerHTML = str; 
+    document.getElementById("d1").innerHTML = y; 
+
+}
+function y1Calc()
+{
+    var x1 = x1Load(); 
+    var y1 = 0;
+    
+    y1 = 2*Math.cos(x1) + 2*Math.sin(x1);
+
+    var str = "wczytana liczba x1 to " + x1 + " [stopniach] ";
+    document.getElementById("p2").innerHTML = str; 
+    document.getElementById("d2").innerHTML = y1; 
+
+}
+function y3Calc()
+{
+    var x1 = x1Load();
+    var x2 = x2Load();
+    var y3 = 0;
+    
+    var suma = Math.pow(x1,5) + 2*Math.pow(x2,4);
+
+    y3 = Math.pow(suma,1/3)*Math.abs(x1-x2);
+
+    var str = "wczytana liczba x1 to " + x1 + " oraz x2 to " + x2;
+    document.getElementById("p3").innerHTML = str; 
+    document.getElementById("d3").innerHTML = y3; 
+
+}
+
+</script>
+</head>
+<body>
+<!--<form>
+<input type="button" name="button" value="OBLICZ" onclick="yCalc()">
+</form>-->
+    <p>Poniżej ukaże się rozwiązanie y</p>
+    <input type="button" name="button" value="OBLICZ" onclick="yCalc()">
+    <p id="p1">Tutaj wyświetlą się wczytane liczby dla wybranego równania</p> 
+    <div id="d1" style="font-size: 48;">
+        <p>Tutaj będzie odpowiedź dla y</p>   
+    </div>
+<br>
+<hr>
+<br>
+    <p>Tutaj będzie odpowiedź do zadania y1</p>   
+    <input type="button" name="button" value="OBLICZ" onclick="y1Calc()">
+    <p id="p2">Tutaj wyświetlą się wczytane liczby dla wybranego równania</p>  
+    <div id="d2" style="font-size: 48;">
+        <p>Tutaj będzie odpowiedź dla y1</p>   
+    </div>
+<br>
+<hr>
+<br>
+    <p>Tutaj będzie odpowiedź do zadania y3</p>   
+    <input type="button" name="button" value="OBLICZ" onclick="y3Calc()">
+    <p id="p3">Tutaj wyświetlą się wczytane liczby dla wybranego równania</p> 
+    <div id="d3" style="font-size: 48;">
+        <p>Tutaj będzie odpowiedź dla y3</p>   
+    </div>
+</body>
+</html>

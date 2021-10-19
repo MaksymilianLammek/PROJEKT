@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> Zadanie 13 </title>
+<script language="JavaScript">
+function Calc()
+{
+   var A = prompt("podaj a ","tutaj wpisz a ");
+   var B = prompt("podaj b ","tutaj wpisz b ");
+   var eq1 = Math.pow(A,3);
+   var eq2 = 3*Math.pow(A,2)*B;
+   var eq3 = 3*A*Math.pow(B,2);
+   var eq4 = Math.pow(B,3);
+   var eq = eq1+eq2+eq3+eq4;
+   var str = "(A+B)";
+   var pot3 = "3";
+   var pot2 = "2";
+    document.write("<h1 style=color:purple;font-size:4vw;>"+str+" "+pot3.sup()+"="+
+        A+pot3.sup()+"+"+
+        "3*"+A+pot2.sup()+"*"+B+"+"+
+        "3*"+A+"*"+B+pot2.sup()+"+"+
+        B+pot3.sup()+"="+
+        eq1+"+"+eq2+"+"+eq3+"+"+eq4+"="+eq+
+        "</h1>"); 
+}
+
+</script>
+</head>
+<body>
+<form>
+<input type="button" name="button" value="OBLICZ" onclick="Calc()">
+</form>
+<div id="d1" style="font-size: 47;color: green;">
+    <p>Tutaj będzie odpowiedź do zadania</p>   
+</div>
+</body>
+</html>

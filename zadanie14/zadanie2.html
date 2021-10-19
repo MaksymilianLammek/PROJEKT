@@ -1,0 +1,86 @@
+<html>
+<head>
+<title> Zadanie 14 </title>
+<!--
+MAKSYMILIAN LAMMEK 3K2
+-->
+<script language="JavaScript">
+    function rozkład()
+{
+    var No = prompt("Podaj ilośćpoczątkową danego pierwiastka ");
+    var T1_2 = prompt("Podaj okres połowicznego rozkładu ");
+    var t = prompt("Podaj ile lat bierzemy pod uwagę w rozkładzie ") 
+    var str1 = "ilość początkowa pierwiastka to "+No;
+    var str2 = "okres połowicznego rozkładu to "+T1_2;
+    var str3 = "ilość lat brana pod uwagę "+t;
+    
+    var stała_rozkładu = 0 ;
+    var stała = Math.log2(2)/T1_2;
+    stała_rozkładu = stała.toFixed(7);
+
+    var potęga = -(stała_rozkładu)*t;
+    var N = No * Math.exp(potęga);
+    
+    //alert(diff);
+    document.getElementById("p1").innerHTML = str1; 
+    document.getElementById("p2").innerHTML = str2; 
+    document.getElementById("p3").innerHTML = str3;
+    document.getElementById("d2").innerHTML = N; 
+    document.getElementById("d3").innerHTML = stała_rozkładu; 
+
+}
+
+
+</script>
+</head>
+<body>
+
+<h1><p style="text-align:center; width= 100%">OBLICZANIE POŁOWICZNEGO ROZKŁADU USTALONEGO PIERWIASTKA</p></h1>
+<div id="d1">
+    <h2><p style="text-align:center">Instukcja korzystania z programu</p></h2>
+    <h2><p style="text-align:center">DANE WEJŚCIOWE jakich możesz użyć do obliczeń</p></h2>
+    <h2><p style="text-align:left">Pierwiastek promieniotwórczy węgla radioaktywnego ma parametry</p></h2>
+    <ul>
+        <li>No możemy założyć że wynosi pomiędzy 500 a 750 gramów </li>
+        <li>t = 1 rok = 1/1/2021 - 1/1/2020 = <span id="czasT"></span>rok</li>
+        <li>T1/2 dla izotopu węgla C14 wynosi 5700 lat </li>
+    </ul>   
+</div>
+    <p id="p1">Tutaj będzie odpowiedź do zadania</p>
+    <p id="p2">Tutaj będzie odpowiedź do zadania</p> 
+    <p id="p3">Tutaj będzie odpowiedź do zadania</p> 
+<div id="d3" style="font-size: 48;text-align:center">
+        <p>Tutaj będzie odpowiedź do zadania</p>    
+    </div>
+<div id="d2" style="font-size: 48;text-align:center">
+    <p>Tutaj będzie odpowiedź do zadania</p>    
+</div>
+<form>
+<input type="button" name="button" value="OBLICZ ROZKŁAD" onclick="rozkład()">
+</form>
+
+<script>
+
+    //var y1 = prompt("Podaj rok.miesiąc.dzień do 1 daty");
+    //var y2 = prompt("Podaj rok.miesiąc.dzień do 2 daty");
+
+    function calcT() {
+
+       // var Y1 = new Date(y1);
+       // var Y2 = new Date(y2);
+        
+        var Y1 = new Date(2021,1,1);
+        var Y2 = new Date(2020,1,1);
+        
+        var diff = Math.abs(Y2.getFullYear() - Y1.getFullYear());
+        
+        return diff;
+    }
+
+    let czasTYear = calcT();
+    document.getElementById("czasT").innerHTML = czasTYear;
+
+</script>
+
+</body>
+</html>
