@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function ciezarowka(ciezarowki_k, maxpredkosc_k, maxobciazenie_k, kolor_k) {
+      //początek konstruktora
+      this.ilosc_ciezarowek = ciezarowki_k
+      this.maxpredkosc = maxpredkosc_k
+      this.maxobciazenie = maxobciazenie_k
+      this.kolor = kolor_k
+      } //koniec konstruktora
+      ciezarowka.prototype.wypisz = function () //definicja metody
+      {
+        alert(this.ilosc_ciezarowek + " " + this.maxpredkosc + " " + this.maxobciazenie + " " + this.kolor);
+      };
+      var ciezarowka1 = new ciezarowka(1, "70km/h", "10t", "czarny"); // nowy obiekt osoba1
+      var ciezarowka2 = new ciezarowka(2, "75km/h", "11t", "bialy");
+      var ciezarowka3 = new ciezarowka(3, "60km/h", "12t", "czerwony");
+      var ciezarowka4 = new ciezarowka(4, "65km/h", "13t", "niebieski");
+      ciezarowka1.wypisz();
+      ciezarowka2.wypisz();
+      ciezarowka3.wypisz();
+      ciezarowka4.wypisz();
+      document.write("dostęp do właściwości" + "<br>");
+      // poniżej dostęp do pól osoby1
+      
+      document.write( "Ciezarowka pierwsza " + " " + ciezarowka1.ilosc_ciezarowek + " " + ciezarowka1.maxpredkosc + " " + ciezarowka1.maxobciazenie+ " " + ciezarowka1.kolor+'<br>');
+
+      document.write( "Ciezarowka druga " + " " + ciezarowka2.ilosc_ciezarowek + " " + ciezarowka2.maxpredkosc + " " + ciezarowka2.maxobciazenie+ " " + ciezarowka2.kolor+'<br>');
+
+      document.write( "Ciezarowka trzecia " + " " + ciezarowka3.ilosc_ciezarowek + " " + ciezarowka3.maxpredkosc + " " + ciezarowka3.maxobciazenie+ " " + ciezarowka3.kolor+'<br>');
+
+      document.write( "Ciezarowka czwarta " + " " + ciezarowka4.ilosc_ciezarowek + " " + ciezarowka4.maxpredkosc + " " + ciezarowka4.maxobciazenie+ " " + ciezarowka4.kolor+'<br>');
+
+    </script>
+  </head>
+  <body>
+    <br />
+    programowanie obiektowe
+  </body>
+</html>
